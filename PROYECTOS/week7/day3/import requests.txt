@@ -1,0 +1,34 @@
+import requests
+
+
+mis_datos = requests.get("http://www.7timer.info/bin/meteo.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0").json()
+
+
+
+
+[
+1,2,3,4
+
+
+
+]
+
+
+
+import json
+import requests
+
+a=json.loads(requests.get("http://lkjhlkjhlkjhjh").text)
+a=requests.get("http://lkjhlkjhlkjhjh").json()
+
+{"q":"hola mundo"}
+
+"http://www.7timer.info/bin/meteo.php?lon=113.2&lat=23.1&ac=0& unit=metric&output=json&tzshift=0"
+
+
+
+for i in range(100):
+    contenido=requests.get("https://datos.gob.es/apidata/catalog/dataset/title/empleo.json", {"_page":i}).text
+    nombre_fichero="fichero"+i+".json"
+    with open(nombre_fichero, "w+") as f:
+        f.write(contenido)
