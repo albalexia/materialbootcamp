@@ -21,14 +21,14 @@ dni_alba="H47584603"
 @app.route('/trabajo_alba', methods=['GET'])
 def api_all():
     token_id = None
-    if 'token_id' in request.args:
+    if 'token_id' in request.args: 
         token_id = request.args['token_id']
     
     if token_id == dni_alba:
         #return pd.read_csv('agencia_empleo_inscritos_2020.csv', sep=";").to_json(orient='records', lines=True, indent=5).replace("\n", "<br>").replace(" ", "&nbsp;")
         dump = (json
                     .dumps(
-                            pd.read_csv('../resources/agencia_empleo_inscritos_2020.csv', sep=";")
+                            pd.read_csv('resources/agencia_empleo_inscritos_2020.csv', sep=";")
                                 .to_dict('records'), indent=5
                             )
                             .replace("\n", "<br>")
